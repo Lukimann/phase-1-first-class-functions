@@ -1,15 +1,28 @@
-function recievesAFunction(callback) {
-    callback()
+function rootFunction() {
+
 }
+function functionA() {
     
-function namedFunction() {
-    console.log(" to not deeply equal ")
+}
+
+function functionB() {
+
+}
+ 
+function receivesAFunction(spy) {
+    spy() 
 }
     
 function returnsANamedFunction() {
-    return() => namedFunction(" to not deeply equal ");
+    return function namedFunction() {
+
+    };
+    //return() => namedFunction(" to not deeply equal ");
 }
     
 function returnsAnAnonymousFunction() {
-    return() => returnsAnAnonymousFunction;
+    return function() {
+
+    };
+   // return() => returnsAnAnonymousFunction;
 }
